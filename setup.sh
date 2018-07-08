@@ -76,7 +76,7 @@ install_zsh_with_brew
 install_oh_my_zsh
 install_zsh_plugins
 install_zsh_themes
-install_powerline_fonts
+install_fonts
 install_terminal
 setup_zsh_configuration
 setup_docker_autocompletion
