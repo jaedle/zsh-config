@@ -57,18 +57,17 @@ git clone https://github.com/valentinocossar/vscode.git ~/.zsh/vscode
 ```
 
 ## Setup terminal inlcuding fonts
+
 ### install iterm2
 
 ```sh
 brew cask install iterm2
 ```
 
-### install power line fonts
+### install nerd fonts
 
 ```sh
-git clone https://github.com/powerline/fonts.git --depth=1
-fonts/install.sh
-rm -rf fonts
+brew tap caskroom/fonts &&  brew cask install font-hack-nerd-font
 ```
 
 ### get .zshrc in place and set permissions
