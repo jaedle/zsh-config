@@ -29,6 +29,7 @@ install_oh_my_zsh() {
 install_zsh_plugins() {
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
     git clone https://github.com/valentinocossar/vscode.git ~/.zsh/vscode
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 }
 
 install_zsh_themes() {
@@ -43,10 +44,13 @@ install_terminal() {
     fi
 }
 
-install_powerline_fonts() {
-    git clone https://github.com/powerline/fonts.git --depth=1
-    fonts/install.sh
-    rm -rf fonts
+install_fonts() {
+    brew tap caskroom/fonts
+    if brew cask ls --versions font-hack-nerd-font > /dev/null; then
+        echo -n 'nerd fonts already installed'
+    else
+        brew cask install font-hack-nerd-font
+    fi
 }
 
 setup_zsh_configuration() {

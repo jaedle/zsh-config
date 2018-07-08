@@ -38,9 +38,15 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 ```
 
+### install zsh-syntax-highlighting
+
+```sh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+```
+
 ### install vscode-plugin
 
-```
+```sh
 git clone https://github.com/valentinocossar/vscode.git ~/.zsh/vscode
 ```
 
