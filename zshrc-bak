@@ -1,0 +1,1 @@
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon user dir vcs)

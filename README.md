@@ -12,6 +12,12 @@ This is my zsh configuration inclduing:
 
 ## Setup zsh including plugins
 
+## Automatic installation
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/jaedle/zsh-config/master/install.sh)"
+```
+
 ### install zsh and zsh-completions
 
 ```sh
