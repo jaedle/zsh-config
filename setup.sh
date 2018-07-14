@@ -30,6 +30,7 @@ install_zsh_plugins() {
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
     git clone https://github.com/valentinocossar/vscode.git ~/.zsh/vscode
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+    git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh/.zsh-nvm/
 }
 
 install_zsh_themes() {

@@ -56,6 +56,12 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-sy
 git clone https://github.com/valentinocossar/vscode.git ~/.zsh/vscode
 ```
 
+### install nvm-zsh plugin
+
+```sh
+git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh/.zsh-nvm/
+```
+
 ## Setup terminal inlcuding fonts
 
 ### install iterm2

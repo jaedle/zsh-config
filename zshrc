@@ -5,6 +5,8 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 source ~/.zsh/vscode/vscode.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/.zsh-nvm/zsh-nvm.plugin.zsh
+
 
 POWERLEVEL9K_OS_ICON_BACKGROUND="white"
 POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
