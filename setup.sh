@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-set -e
+set -x
 
 remove_current_installation() {
     rm -rf ~/.zsh
@@ -54,9 +54,16 @@ install_fonts() {
     fi
 }
 
+backup_previous_zsh_configuration() {
+    if [ ! -f /tmp/foo.txt ]; then
+        mv ~/.zshrc ~/.zshrc.bak
+    fi
+}
+
 setup_zsh_configuration() {
-    mv ~/.zshrc ~/.zshrc.bak
-    cp zshrc ~/.zshrc
+    backup_previous_zsh_configuration
+    path_of_repository="$( cd "$(dirname "$0")" ; pwd -P )"
+    cp "$path_of_repository/zshrc" ~/.zshrc
     chmod 0700 ~/.zshrc
 }
 
