@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-set -x
+set -e
 
 remove_current_installation() {
     rm -rf ~/.zsh
@@ -75,8 +75,24 @@ setup_docker_autocompletion() {
 
 }
 
+install_git_duet() {
+    brew tap git-duet/tap
+     if brew ls --versions git-duet > /dev/null; then
+        echo -n 'git-duet already installed'
+    else
+        brew install git-duet
+    fi
+}
+
 change_shell() {
     chsh -s /bin/zsh
+}
+
+setup_git_aliases() {
+    git config --global alias.br branch
+    git config --global alias.co checkout
+    git config --global alias.ci commit
+    git config --global alias.st status
 }
 
 remove_current_installation
@@ -86,6 +102,11 @@ install_zsh_plugins
 install_zsh_themes
 install_fonts
 install_terminal
+install_git_duet
+
+
+setup_git_aliases
 setup_zsh_configuration
 setup_docker_autocompletion
+
 change_shell
