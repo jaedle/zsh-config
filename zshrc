@@ -61,5 +61,5 @@ autoload -Uz compinit && compinit -i
 export EDITOR='vim'
 [ -f ~/go/bin ] && export PATH=~/go/bin:$PATH
 
-export GIT_DUET_GLOBAL=true
-export GIT_DUET_CO_AUTHORED_BY=true
+export GIT_DUET_GLOBAL=1
+export GIT_DUET_CO_AUTHORED_BY=1
