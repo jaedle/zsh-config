@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+
+npm install -g \
+	@angular/cli \
+	eslint \
+	generate \
+	generator-license \
+	gh \
+	jest \
+	npm-check \
+	rimraf \
+	vtop \
+	tetris \
+	tslint
