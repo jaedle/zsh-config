@@ -63,3 +63,12 @@ export EDITOR='vim'
 
 export GIT_DUET_GLOBAL=1
 export GIT_DUET_CO_AUTHORED_BY=1
+
+# added by travis gem
+[ -f /Users/jaedle/.travis/travis.sh ] && source /Users/jaedle/.travis/travis.sh
+
+export PATH=~/go/bin:$PATH
+export GOPATH=~/go
+
+export SDKMAN_DIR="/Users/jaedle/.sdkman"
+[[ -s "/Users/jaedle/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jaedle/.sdkman/bin/sdkman-init.sh"
