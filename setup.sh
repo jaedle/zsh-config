@@ -84,10 +84,6 @@ install_git_duet() {
     fi
 }
 
-change_shell() {
-    chsh -s /bin/zsh
-}
-
 setup_git_aliases() {
     git config --global alias.br branch
     git config --global alias.co checkout
@@ -109,4 +105,3 @@ setup_git_aliases
 setup_zsh_configuration
 setup_docker_autocompletion
 
-change_shell
