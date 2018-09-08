@@ -23,7 +23,9 @@ install_zsh_with_brew() {
 
 install_oh_my_zsh() {
     # disable auto change to csh and start of csh
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed -E 's/^[[:space:]]+chsh/#chsh/g' | sed -E 's/^[[:space:]]+env zsh/#env zsh/g')" 
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh \
+        | sed -E 's/^[[:space:]]+chsh/#chsh/g' \
+        | sed -E 's/^[[:space:]]+env zsh/#env zsh/g')"
 }
 
 install_zsh_plugins() {
@@ -55,22 +57,33 @@ install_fonts() {
 }
 
 backup_previous_zsh_configuration() {
-    if [ ! -f /tmp/foo.txt ]; then
+    if [ -f ~/.zshrc ]; then
         mv ~/.zshrc ~/.zshrc.bak
+    fi
+}
+
+backup_previous_global_profile() {
+    if [ -f ~/.profile ]; then
+        mv ~/.profile ~/.profile.bak
     fi
 }
 
 setup_zsh_configuration() {
     backup_previous_zsh_configuration
+    backup_previous_global_profile
     path_of_repository="$( cd "$(dirname "$0")" ; pwd -P )"
+
     cp "$path_of_repository/zshrc" ~/.zshrc
     chmod 0700 ~/.zshrc
+
+    cp "$path_of_repository/profile" ~/.profile
+    chmod 0700 ~/.profile
 }
 
 setup_docker_autocompletion() {
     mkdir -p ~/.zsh/completion
     ln -s /Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion ~/.zsh/completion/_docker
-    ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.zsh-completion ~/.zsh/completion/_docker-machine
+    ln -s /Applications/Docker.app/Contents /Resources/etc/docker-machine.zsh-completion ~/.zsh/completion/_docker-machine
     ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion ~/.zsh/completion/_docker-compose
 
 }
