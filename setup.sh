@@ -83,7 +83,7 @@ setup_zsh_configuration() {
 setup_docker_autocompletion() {
     mkdir -p ~/.zsh/completion
     ln -s /Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion ~/.zsh/completion/_docker
-    ln -s /Applications/Docker.app/Contents /Resources/etc/docker-machine.zsh-completion ~/.zsh/completion/_docker-machine
+    ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.zsh-completion ~/.zsh/completion/_docker-machine
     ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion ~/.zsh/completion/_docker-compose
 
 }
