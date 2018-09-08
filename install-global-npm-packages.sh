@@ -4,7 +4,7 @@ npm install -g \
 	@angular/cli \
 	eslint \
 	generate \
-	generator-license \
+	generate-license \
 	gh \
 	jest \
 	npm-check \
