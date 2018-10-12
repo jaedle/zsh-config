@@ -48,21 +48,22 @@ install_fonts() {
     fi
 }
 
-backup_previous_zsh_configuration() {
+backup_affected_configuration_files() {
     if [ -f ~/.zshrc ]; then
         mv ~/.zshrc ~/.zshrc.bak
     fi
-}
 
-backup_previous_global_profile() {
     if [ -f ~/.profile ]; then
         mv ~/.profile ~/.profile.bak
+    fi
+
+    if [ -f ~/.zsh_plugins.txt ]; then
+        mv ~/.zsh_plugins.txt ~/.zsh_plugins.txt.bak
     fi
 }
 
 setup_zsh_configuration() {
-    backup_previous_zsh_configuration
-    backup_previous_global_profile
+    backup_affected_configuration_files
     path_of_repository="$( cd "$(dirname "$0")" ; pwd -P )"
 
     cp "$path_of_repository/.zshrc" ~/.zshrc
