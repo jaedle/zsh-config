@@ -70,6 +70,9 @@ setup_zsh_configuration() {
 
     cp "$path_of_repository/.profile" ~/.profile
     chmod 0700 ~/.profile
+
+    cp "$path_of_repository/.zsh_plugins.txt" ~/.zsh_plugins.txt
+    chmod 0600 ~/.zsh_plugins.txt
 }
 
 setup_docker_autocompletion() {
