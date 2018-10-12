@@ -1,10 +1,13 @@
 djui/alias-tips
+docker/cli
+docker/compose
+docker/machine
+go-task/task path:completion/zsh
 lukechilds/zsh-nvm
 robbyrussell/oh-my-zsh
+robbyrussell/oh-my-zsh kind:path path:plugins/docker
 robbyrussell/oh-my-zsh path:plugins/brew
 robbyrussell/oh-my-zsh path:plugins/common-aliases
-robbyrussell/oh-my-zsh path:plugins/docker
-robbyrussell/oh-my-zsh path:plugins/doctl
 robbyrussell/oh-my-zsh path:plugins/git
 robbyrussell/oh-my-zsh path:plugins/git-extras
 robbyrussell/oh-my-zsh path:plugins/gradle
@@ -13,7 +16,7 @@ robbyrussell/oh-my-zsh path:plugins/osx
 robbyrussell/oh-my-zsh path:plugins/zsh_reload
 valentinocossar/vscode
 yardnsm/blox-zsh-theme
+zdharma/fast-syntax-highlighting
 zdharma/history-search-multi-word
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
-zsh-users/zsh-syntax-highlighting
