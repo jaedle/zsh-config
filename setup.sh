@@ -8,13 +8,13 @@ remove_current_installation() {
 install_zsh_with_brew() {
     brew install zsh zsh-completions
     if brew ls --versions zsh > /dev/null; then
-        echo -n 'zsh already installed'
+        echo 'zsh already installed'
     else
         brew install zsh
     fi
 
     if brew ls --versions zsh-completions > /dev/null; then
-        echo -n 'zsh-completions already installed'
+        echo 'zsh-completions already installed'
     else
         brew install zsh-completions
     fi
@@ -33,7 +33,7 @@ install_zsh_themes() {
 
 install_terminal() {
     if brew cask ls --versions iterm2 > /dev/null; then
-        echo -n 'iTerm2 already installed'
+        echo 'iTerm2 already installed'
     else
         brew cask install iterm2
     fi
@@ -42,7 +42,7 @@ install_terminal() {
 install_fonts() {
     brew tap caskroom/fonts
     if brew cask ls --versions font-hack-nerd-font > /dev/null; then
-        echo -n 'nerd fonts already installed'
+        echo 'nerd fonts already installed'
     else
         brew cask install font-hack-nerd-font
     fi
@@ -86,7 +86,7 @@ setup_docker_autocompletion() {
 install_git_duet() {
     brew tap git-duet/tap
     if brew ls --versions git-duet > /dev/null; then
-        echo -n 'git-duet already installed'
+        echo 'git-duet already installed'
     else
         brew install git-duet
     fi
@@ -101,7 +101,7 @@ setup_git_aliases() {
 
 install_antibody() {
     if brew ls --versions getantibody/tap/antibody > /dev/null; then
-        echo -n 'getantibody/tap/antibody already installed'
+        echo 'getantibody/tap/antibody already installed'
     else
         brew install getantibody/tap/antibody
     fi
