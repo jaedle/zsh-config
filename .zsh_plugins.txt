@@ -1,4 +1,3 @@
-arzzen/calc.plugin.zsh
 djui/alias-tips
 lukechilds/zsh-nvm
 robbyrussell/oh-my-zsh
