@@ -1,3 +1,4 @@
+changyuheng/fz
 djui/alias-tips
 docker/cli
 docker/compose
@@ -14,6 +15,7 @@ robbyrussell/oh-my-zsh path:plugins/gradle
 robbyrussell/oh-my-zsh path:plugins/npm
 robbyrussell/oh-my-zsh path:plugins/osx
 robbyrussell/oh-my-zsh path:plugins/zsh_reload
+rupa/z
 valentinocossar/vscode
 yardnsm/blox-zsh-theme
 zdharma/fast-syntax-highlighting

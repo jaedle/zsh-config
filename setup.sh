@@ -107,12 +107,21 @@ install_antibody() {
     fi
 }
 
+install_fzf() {
+    if brew ls --versions fzf > /dev/null; then
+        echo 'fzf already installed'
+    else
+        brew install fzf
+    fi
+}
+
 remove_current_installation
 install_zsh_with_brew
 install_antibody
 install_fonts
 install_terminal
 install_git_duet
+install_fzf
 
 setup_git_aliases
 setup_zsh_configuration
