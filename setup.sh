@@ -20,17 +20,6 @@ install_zsh_with_brew() {
     fi
 }
 
-install_oh_my_zsh() {
-    # disable auto change to csh and start of csh
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh \
-        | sed -E 's/^[[:space:]]+chsh/#chsh/g' \
-        | sed -E 's/^[[:space:]]+env zsh/#env zsh/g')"
-}
-
-install_zsh_themes() {
-    git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-}
-
 install_terminal() {
     if brew cask ls --versions iterm2 > /dev/null; then
         echo 'iTerm2 already installed'
@@ -76,13 +65,6 @@ setup_zsh_configuration() {
     chmod 0600 ~/.zsh_plugins.txt
 }
 
-setup_docker_autocompletion() {
-    mkdir -p ~/.zsh/completion
-    ln -s /Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion ~/.zsh/completion/_docker
-    ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.zsh-completion ~/.zsh/completion/_docker-machine
-    ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion ~/.zsh/completion/_docker-compose
-}
-
 install_git_duet() {
     brew tap git-duet/tap
     if brew ls --versions git-duet > /dev/null; then
@@ -115,6 +97,16 @@ install_fzf() {
     fi
 }
 
+set_nvm_default_packages() {
+    path_of_repository="$( cd "$(dirname "$0")" ; pwd -P )"
+    nvm_dir="$(zsh -i -c 'echo $NVM_DIR')"
+    default_packages_file="$nvm_dir/default-packages"
+    if [ -f ${default_packages_file} ]; then
+        mv ${default_packages_file} ${default_packages_file}.bak
+    fi
+    cp ${path_of_repository}/nvm/default-packages ${default_packages_file}
+}
+
 remove_current_installation
 install_zsh_with_brew
 install_antibody
@@ -125,4 +117,5 @@ install_fzf
 
 setup_git_aliases
 setup_zsh_configuration
-setup_docker_autocompletion
+
+set_nvm_default_packages

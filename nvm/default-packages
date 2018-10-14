@@ -1,0 +1,11 @@
+@angular/cli
+eslint
+generate
+generate-license
+gh
+jest
+npm-check
+rimraf
+vtop
+tetris
+tslint
