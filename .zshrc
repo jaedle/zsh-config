@@ -22,3 +22,6 @@ unset docker_completion_path
 unset docker_compose_completion_path
 unset docker_machine_completion_path
 unset go_task_completion_path
+
+alias debdocker="docker container run --rm -it debian bash"
+alias alpdocker="docker container run --rm -it alpine sh"
