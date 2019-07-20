@@ -1,6 +1,5 @@
 source "$HOME/.profile"
 
-alias git='LANG=en_US git'
 export NVM_LAZY_LOAD=true
 
 ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"

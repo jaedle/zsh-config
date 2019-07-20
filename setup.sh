@@ -96,6 +96,14 @@ install_fzf() {
     fi
 }
 
+install_thefuck() {
+    if brew ls --versions thefuck > /dev/null; then
+        echo 'thefuck already installed'
+    else
+        brew install thefuck
+    fi
+}
+
 set_nvm_default_packages() {
     path_of_repository="$( cd "$(dirname "$0")" ; pwd -P )"
     nvm_dir="$(zsh -i -c 'echo $NVM_DIR')"
@@ -113,6 +121,7 @@ install_fonts
 install_terminal
 install_git_duet
 install_fzf
+install_thefuck
 
 setup_git_aliases
 setup_zsh_configuration
