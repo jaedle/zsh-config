@@ -25,3 +25,4 @@ unset go_task_completion_path
 alias debdocker="docker container run --rm -it debian bash"
 alias alpdocker="docker container run --rm -it alpine sh"
 alias tw="task world"
+alias wa="watch -n1 cf app"
