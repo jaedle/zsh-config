@@ -29,6 +29,7 @@ install_terminal() {
 }
 
 install_fonts() {
+    brew tap homebrew/cask-fonts
     if brew cask ls --versions font-hack-nerd-font > /dev/null; then
         echo 'nerd fonts already installed'
     else
