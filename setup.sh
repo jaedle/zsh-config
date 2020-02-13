@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-set -e
+set -ex
 
 remove_current_installation() {
     rm -rf ~/.zsh
