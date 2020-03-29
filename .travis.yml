@@ -1,0 +1,5 @@
+language: 'minimal'
+os: 'osx'
+
+script:
+  - echo 'hello world'
