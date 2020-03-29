@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 set -e
 
 remove_current_installation() {
@@ -30,15 +30,15 @@ install_fonts() {
 }
 
 backup_affected_configuration_files() {
-    if [ -f ~/.zshrc ]; then
+    if [[ -f ~/.zshrc ]]; then
         mv ~/.zshrc ~/.zshrc.bak
     fi
 
-    if [ -f ~/.profile ]; then
+    if [[ -f ~/.profile ]]; then
         mv ~/.profile ~/.profile.bak
     fi
 
-    if [ -f ~/.zsh_plugins.txt ]; then
+    if [[ -f ~/.zsh_plugins.txt ]]; then
         mv ~/.zsh_plugins.txt ~/.zsh_plugins.txt.bak
     fi
 }
