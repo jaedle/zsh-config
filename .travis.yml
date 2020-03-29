@@ -5,4 +5,4 @@ before_install:
   - brew cleanup
 script:
   - ./setup.sh
-  - zsh -ic 'hello from shell'
+  - zsh -ic 'echo "hello from shell"'
