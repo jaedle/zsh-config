@@ -74,13 +74,6 @@ install_git_duet() {
     fi
 }
 
-setup_git_aliases() {
-    git config --global alias.br branch
-    git config --global alias.co checkout
-    git config --global alias.ci commit
-    git config --global alias.st status
-}
-
 install_antibody() {
     if brew ls --versions getantibody/tap/antibody > /dev/null; then
         echo 'getantibody/tap/antibody already installed'
