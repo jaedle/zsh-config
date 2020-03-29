@@ -20,14 +20,6 @@ install_zsh_with_brew() {
     fi
 }
 
-install_terminal() {
-    if brew cask ls --versions iterm2 > /dev/null; then
-        echo 'iTerm2 already installed'
-    else
-        brew cask install iterm2
-    fi
-}
-
 install_fonts() {
     brew tap homebrew/cask-fonts
     if brew cask ls --versions font-hack-nerd-font > /dev/null; then
@@ -102,10 +94,8 @@ remove_current_installation
 install_zsh_with_brew
 install_antibody
 install_fonts
-install_terminal
 install_git_duet
 install_fzf
 install_thefuck
 
-setup_git_aliases
 setup_zsh_configuration
