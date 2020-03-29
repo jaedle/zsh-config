@@ -1,8 +1,6 @@
 amstrad/oh-my-matrix
 djui/alias-tips
 docker/cli
-docker/compose
-docker/machine
 go-task/task path:completion/zsh
 robbyrussell/oh-my-zsh
 robbyrussell/oh-my-zsh kind:path path:plugins/docker
