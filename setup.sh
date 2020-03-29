@@ -105,16 +105,6 @@ install_thefuck() {
     fi
 }
 
-set_nvm_default_packages() {
-    path_of_repository="$( cd "$(dirname "$0")" ; pwd -P )"
-    nvm_dir="$(zsh -i -c 'echo $NVM_DIR')"
-    default_packages_file="$nvm_dir/default-packages"
-    if [ -f "${default_packages_file}" ]; then
-        mv ${default_packages_file} ${default_packages_file}.bak
-    fi
-    cp ${path_of_repository}/nvm/default-packages ${default_packages_file}
-}
-
 remove_current_installation
 install_zsh_with_brew
 install_antibody
@@ -126,5 +116,3 @@ install_thefuck
 
 setup_git_aliases
 setup_zsh_configuration
-
-set_nvm_default_packages
