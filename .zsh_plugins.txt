@@ -1,10 +1,7 @@
 amstrad/oh-my-matrix
 djui/alias-tips
 docker/cli
-docker/compose
-docker/machine
 go-task/task path:completion/zsh
-lukechilds/zsh-nvm
 robbyrussell/oh-my-zsh
 robbyrussell/oh-my-zsh kind:path path:plugins/docker
 robbyrussell/oh-my-zsh path:plugins/brew
@@ -17,6 +14,7 @@ robbyrussell/oh-my-zsh path:plugins/osx
 robbyrussell/oh-my-zsh folder:plugins/thefuck
 robbyrussell/oh-my-zsh path:plugins/web-search
 robbyrussell/oh-my-zsh path:plugins/zsh_reload
+robbyrussell/oh-my-zsh path:plugins/asdf
 rupa/z
 valentinocossar/vscode
 yardnsm/blox-zsh-theme
@@ -25,4 +23,3 @@ zdharma/history-search-multi-word
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 changyuheng/fz
-b4b4r07/emoji-cli

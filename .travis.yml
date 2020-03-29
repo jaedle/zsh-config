@@ -1,0 +1,8 @@
+language: 'minimal'
+os: 'osx'
+
+before_install:
+  - brew cleanup
+script:
+  - ./setup.sh
+  - zsh -ic 'echo "hello from shell"'

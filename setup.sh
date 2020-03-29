@@ -1,5 +1,5 @@
-#!/usr/bin/env sh
-set -ex
+#!/usr/bin/env bash
+set -e
 
 remove_current_installation() {
     rm -rf ~/.zsh
@@ -20,14 +20,6 @@ install_zsh_with_brew() {
     fi
 }
 
-install_terminal() {
-    if brew cask ls --versions iterm2 > /dev/null; then
-        echo 'iTerm2 already installed'
-    else
-        brew cask install iterm2
-    fi
-}
-
 install_fonts() {
     brew tap homebrew/cask-fonts
     if brew cask ls --versions font-hack-nerd-font > /dev/null; then
@@ -38,15 +30,15 @@ install_fonts() {
 }
 
 backup_affected_configuration_files() {
-    if [ -f ~/.zshrc ]; then
+    if [[ -f ~/.zshrc ]]; then
         mv ~/.zshrc ~/.zshrc.bak
     fi
 
-    if [ -f ~/.profile ]; then
+    if [[ -f ~/.profile ]]; then
         mv ~/.profile ~/.profile.bak
     fi
 
-    if [ -f ~/.zsh_plugins.txt ]; then
+    if [[ -f ~/.zsh_plugins.txt ]]; then
         mv ~/.zsh_plugins.txt ~/.zsh_plugins.txt.bak
     fi
 }
@@ -74,13 +66,6 @@ install_git_duet() {
     fi
 }
 
-setup_git_aliases() {
-    git config --global alias.br branch
-    git config --global alias.co checkout
-    git config --global alias.ci commit
-    git config --global alias.st status
-}
-
 install_antibody() {
     if brew ls --versions getantibody/tap/antibody > /dev/null; then
         echo 'getantibody/tap/antibody already installed'
@@ -105,26 +90,12 @@ install_thefuck() {
     fi
 }
 
-set_nvm_default_packages() {
-    path_of_repository="$( cd "$(dirname "$0")" ; pwd -P )"
-    nvm_dir="$(zsh -i -c 'echo $NVM_DIR')"
-    default_packages_file="$nvm_dir/default-packages"
-    if [ -f "${default_packages_file}" ]; then
-        mv ${default_packages_file} ${default_packages_file}.bak
-    fi
-    cp ${path_of_repository}/nvm/default-packages ${default_packages_file}
-}
-
 remove_current_installation
 install_zsh_with_brew
 install_antibody
 install_fonts
-install_terminal
 install_git_duet
 install_fzf
 install_thefuck
 
-setup_git_aliases
 setup_zsh_configuration
-
-set_nvm_default_packages
