@@ -3,6 +3,7 @@ os: 'osx'
 
 before_install:
   - brew cleanup
+  - brew install jq
 script:
   - ./setup.sh
   - zsh -ic 'echo "hello from shell"'
