@@ -91,6 +91,8 @@ install_thefuck() {
 }
 
 install_asdf_plugins() {
+    brew install asdf
+
     PLUGINS="$(cat asdf/plugins.csv)"
     for plugin in $PLUGINS; do
         name="$(echo "$plugin" | cut -d ';' -f1)"
