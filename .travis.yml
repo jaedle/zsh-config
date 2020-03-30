@@ -6,3 +6,9 @@ before_install:
 script:
   - ./setup.sh
   - zsh -ic 'echo "hello from shell"'
+  - zsh -ic 'which asdf'
+  - zsh -ic 'which go'
+  - zsh -ic 'which node'
+  - zsh -ic 'go version'
+  - zsh -ic 'node --version'
+  - zsh -ic 'java -version

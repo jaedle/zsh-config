@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -ex
 
 remove_current_installation() {
     rm -rf ~/.zsh
@@ -90,6 +90,29 @@ install_thefuck() {
     fi
 }
 
+install_asdf_plugins() {
+    PLUGINS="$(cat asdf/plugins.csv)"
+    for plugin in $PLUGINS; do
+        name="$(echo "$plugin" | cut -d ';' -f1)"
+        repository="$(echo "$plugin" | cut -d ';' -f2)"
+        asdf plugin add "$name" "$repository"
+    done
+}
+
+asdf_setup_keyring() {
+    bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+}
+
+install_asdf_packages() {
+    PACKAGES="$(cat asdf/packages.csv)"
+    for package in $PACKAGES; do
+        name="$(echo "$package" | cut -d ';' -f1)"
+        version="$(echo "$package" | cut -d ';' -f2)"
+        asdf install "$name" "$version"
+        asdf global "$name" "$version"
+    done
+}
+
 remove_current_installation
 install_zsh_with_brew
 install_antibody
@@ -99,3 +122,7 @@ install_fzf
 install_thefuck
 
 setup_zsh_configuration
+
+install_asdf_plugins
+asdf_setup_keyring
+install_asdf_packages
