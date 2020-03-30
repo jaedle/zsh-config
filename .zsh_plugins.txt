@@ -4,6 +4,7 @@ docker/cli
 go-task/task path:completion/zsh
 robbyrussell/oh-my-zsh
 robbyrussell/oh-my-zsh kind:path path:plugins/docker
+robbyrussell/oh-my-zsh path:plugins/asdf
 robbyrussell/oh-my-zsh path:plugins/brew
 robbyrussell/oh-my-zsh path:plugins/common-aliases
 robbyrussell/oh-my-zsh path:plugins/git
